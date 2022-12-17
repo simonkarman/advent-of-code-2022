@@ -5,6 +5,12 @@ import (
 	"strings"
 )
 
+type Day02 struct{}
+
+func (d Day02) DayNumber() int {
+	return 2
+}
+
 // 1 Rock
 // 2 Paper
 // 3 Scissors
@@ -38,7 +44,7 @@ func toScore(opponent, me int) int {
 	return 6
 }
 
-func SolutionDay02A(input []string) int {
+func (d Day02) SolutionA(input []string) int {
 	score := 0
 	for i := 0; i < len(input); i++ {
 		if input[i] == "" {
@@ -52,7 +58,11 @@ func SolutionDay02A(input []string) int {
 	return score
 }
 
-func SolutionDay02B(input []string) int {
+func (d Day02) ResultsA() (int, int) {
+	return 15, 11150
+}
+
+func (d Day02) SolutionB(input []string) int {
 	score := 0
 	for i := 0; i < len(input); i++ {
 		if input[i] == "" {
@@ -70,4 +80,8 @@ func SolutionDay02B(input []string) int {
 		}
 	}
 	return score
+}
+
+func (d Day02) ResultsB() (int, int) {
+	return 12, 8295
 }

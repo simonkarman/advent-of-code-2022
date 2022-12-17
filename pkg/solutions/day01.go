@@ -6,7 +6,13 @@ import (
 	"strconv"
 )
 
-func SolutionDay01A(input []string) int {
+type Day01 struct{}
+
+func (d Day01) DayNumber() int {
+	return 1
+}
+
+func (d Day01) SolutionA(input []string) int {
 	current, max := 0, 0
 	for i := 0; i < len(input); i++ {
 		calories, err := strconv.Atoi(input[i])
@@ -22,7 +28,11 @@ func SolutionDay01A(input []string) int {
 	return max
 }
 
-func SolutionDay01B(input []string) int {
+func (d Day01) ResultsA() (int, int) {
+	return 24000, 69836
+}
+
+func (d Day01) SolutionB(input []string) int {
 	elves := []int{0}
 	for i := 0; i < len(input); i++ {
 		calories, err := strconv.Atoi(input[i])
@@ -39,4 +49,8 @@ func SolutionDay01B(input []string) int {
 		sum += elves[i]
 	}
 	return sum
+}
+
+func (d Day01) ResultsB() (int, int) {
+	return 45000, 207968
 }
