@@ -7,14 +7,14 @@ import (
 	"testing"
 )
 
-var exampleInput, input = utils.GetInputs(1)
+var exampleInput01, input01 = utils.GetInputs(1)
 
 func TestSolutionDay01A(t *testing.T) {
-	assert.Equal(t, 24000, solutions.SolutionDay01A(exampleInput))
-	assert.Equal(t, 69836, solutions.SolutionDay01A(input))
+	assert.Equal(t, 24000, solutions.SolutionDay01A(exampleInput01))
+	assert.Equal(t, 69836, solutions.SolutionDay01A(input01))
 }
 
 func TestSolutionDay01B(t *testing.T) {
-	assert.Equal(t, 45000, solutions.SolutionDay01B(exampleInput))
-	assert.Equal(t, 207968, solutions.SolutionDay01B(input), "they should be equal")
+	assert.Equal(t, 45000, solutions.SolutionDay01B(exampleInput01))
+	assert.Equal(t, 207968, solutions.SolutionDay01B(input01))
 }
