@@ -13,6 +13,7 @@ func TestSolutions(t *testing.T) {
 		solutions.Day00{},
 		solutions.Day01{},
 		solutions.Day02{},
+		solutions.Day03{},
 	}
 	for _, day := range days {
 		number := day.DayNumber()

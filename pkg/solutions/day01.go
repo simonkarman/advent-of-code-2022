@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"fmt"
 	"sort"
 	"strconv"
 )
@@ -42,7 +41,6 @@ func (d Day01) SolutionB(input []string) int {
 			elves[len(elves)-1] += calories
 		}
 	}
-	fmt.Println(len(elves))
 	sort.Ints(elves)
 	sum := 0
 	for i := len(elves) - 3; i < len(elves); i++ {

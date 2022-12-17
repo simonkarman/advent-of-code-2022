@@ -47,9 +47,6 @@ func toScore(opponent, me int) int {
 func (d Day02) SolutionA(input []string) int {
 	score := 0
 	for i := 0; i < len(input); i++ {
-		if input[i] == "" {
-			continue
-		}
 		round := strings.Split(input[i], " ")
 		opponent := toShape(round[0], "ABC")
 		me := toShape(round[1], "XYZ")
@@ -65,9 +62,6 @@ func (d Day02) ResultsA() (int, int) {
 func (d Day02) SolutionB(input []string) int {
 	score := 0
 	for i := 0; i < len(input); i++ {
-		if input[i] == "" {
-			continue
-		}
 		round := strings.Split(input[i], " ")
 		opponent := toShape(round[0], "ABC")
 		targetScore := (toShape(round[1], "XYZ") - 1) * 3
